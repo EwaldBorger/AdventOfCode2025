@@ -1,23 +1,55 @@
 {
-    "name": "ewald/advent-of-code2025",
-    "autoload": {
-        "psr-4": {
-            "Ewald\\AdventOfCode2025\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Ewald Börger",
-            "email": "ewald.borger@novoserve.com"
-        }
-    ],
-    "require-dev": {
-        "carthage-software/mago": "^1.0.0-rc.6",
-        "phpunit/phpunit": "^12.4"
-    },
-    "config": {
-        "allow-plugins": {
-            "carthage-software/mago": true
-        }
+  "name": "ewald/advent-of-code2025",
+  "autoload": {
+    "psr-4": {
+      "Ewald\\AdventOfCode2025\\": "src/"
     }
+  },
+  "authors": [
+    {
+      "name": "Ewald Börger",
+      "email": "ewald.borger@novoserve.com"
+    }
+  ],
+  "require-dev": {
+    "carthage-software/mago": "^1.0.0-rc.6",
+    "phpunit/phpunit": "^12.4"
+  },
+  "config": {
+    "allow-plugins": {
+      "carthage-software/mago": true
+    }
+  },
+  "scripts": {
+    "lint": "mago lint",
+    "lint-fix": "mago lint --fix",
+    "paratest:coverage": [
+      "Composer\\Config::disableProcessTimeout",
+      "@putenv XDEBUG_MODE=coverage",
+      "paratest --testsuite all --configuration phpunit.dist.xml --passthru-php=\"'-dpcov.enabled=1' '-dpcov.directory=.' '-dpcov.exclude=~(vendor)~'\""
+    ],
+    "paratest:unit": [
+      "Composer\\Config::disableProcessTimeout",
+      "paratest --testsuite all --configuration phpunit.dist.xml --no-coverage"
+    ],
+    "analyze": "mago analyze",
+    "analyze-fix": "mago analyze --fix",
+    "style-check": "mago format --dry-run",
+    "style-fix": "mago format",
+    "code-check": [
+      "@lint",
+      "@analyze",
+      "@style-check"
+    ],
+    "code-fix": [
+      "@lint-fix",
+      "@analyze-fix",
+      "@style-fix"
+    ],
+    "code-baselines": [
+      "mago lint --generate-baseline",
+      "mago analyze --generate-baseline"
+    ],
+    "test:unit": "phpunit --testdox"
+  }
 }

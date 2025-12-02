@@ -28,7 +28,7 @@ class Day2a extends DayBase
         $start = (int) $split[0];
         $end = (int) $split[1];
         $all = range($start, $end);
-        $this->log[] = "$start - $end = " . count($all);
+        $this->log[] = "{$start} - {$end} = " . count($all);
         $wrongIds = [];
         foreach ($all as $id) {
             if ($this->isWrongId($id)) {
@@ -45,7 +45,9 @@ class Day2a extends DayBase
         if (($n % 2) !== 0 || $n === 0) {
             return false;
         }
-        $split = str_split($str, $n / 2);
+        /** @var positive-int $half */
+        $half = (int) floor($n / 2);
+        $split = str_split($str, $half);
         return $split[0] === $split[1];
     }
 }

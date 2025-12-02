@@ -4,6 +4,7 @@ namespace Ewald\AdventOfCode2025;
 
 class Day2b extends Day2a
 {
+    #[\Override]
     public function isWrongId(int $id): bool
     {
         $str = (string) $id;
@@ -12,10 +13,11 @@ class Day2b extends Day2a
             return true;
         }
         $half = (int) floor($n / 2);
+        /** @var positive-int $length */
         for ($length = $half; $length > 0; $length--) {
-            $log = "checking $id with $length long blocks";
+            $log = "checking {$id} with {$length} long blocks";
             if (($n % $length) !== 0) {
-                $this->log[] = $log . " skip, $n not divisible by $length";
+                $this->log[] = $log . " skip, {$n} not divisible by {$length}";
                 continue;
             }
             $uniqueParts = array_unique(str_split($str, $length));

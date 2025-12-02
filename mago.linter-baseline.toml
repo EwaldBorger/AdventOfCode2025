@@ -1,0 +1,13 @@
+variant = "loose"
+
+[[issues]]
+file = "src/Day1b.php"
+code = "no-else-clause"
+message = "Avoid `elseif` clauses."
+count = 1
+
+[[issues]]
+file = "src/Day2a.php"
+code = "prefer-early-continue"
+message = "Consider using early continue pattern to reduce nesting."
+count = 1
