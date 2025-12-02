@@ -21,7 +21,7 @@ class Day1bTest extends TestCase
 
 
     /**
-     * @return iterable<array{0: string, 1: int}>
+     * @return iterable<string: array{0: string, 1: int}>
      */
     public static function provideRotations(): iterable
     {
@@ -34,7 +34,7 @@ class Day1bTest extends TestCase
     }
 
     /**
-     * @return iterable<string: array{0: int, 1: int, 2: int}>
+     * @return iterable<string: array{0: string[], 1: int}>
      */
     public static function provideBasic(): iterable
     {

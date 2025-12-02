@@ -4,8 +4,68 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4018079c883ef6d8e7dafad8bb5cc4fd",
-    "packages": [
+    "content-hash": "3b61b2b1e5581f8b2c9cd488d0486b27",
+    "packages": [],
+    "packages-dev": [
+        {
+            "name": "carthage-software/mago",
+            "version": "1.0.0-rc.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/carthage-software/mago.git",
+                "reference": "b8fbffa5e81676b010edf85c1445348744154702"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/carthage-software/mago/zipball/b8fbffa5e81676b010edf85c1445348744154702",
+                "reference": "b8fbffa5e81676b010edf85c1445348744154702",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^2.6",
+                "php": "~8.1 || ~8.2 || ~8.3 || ~8.4"
+            },
+            "require-dev": {
+                "composer/composer": "^2.8"
+            },
+            "bin": [
+                "composer/bin/mago"
+            ],
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Mago\\MagoPlugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mago\\": "composer/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT OR Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Saif Eddin Gmati",
+                    "email": "azjezz@carthage.software"
+                }
+            ],
+            "description": "Mago is a toolchain for PHP that aims to provide a set of tools to help developers write better code.",
+            "keywords": [
+                "dev"
+            ],
+            "support": {
+                "issues": "https://github.com/carthage-software/mago/issues",
+                "source": "https://github.com/carthage-software/mago/tree/1.0.0-rc.7"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/azjezz",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-12-02T19:47:41+00:00"
+        },
         {
             "name": "myclabs/deep-copy",
             "version": "1.13.4",
@@ -1681,10 +1741,11 @@
             "time": "2025-11-17T20:03:58+00:00"
         }
     ],
-    "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "carthage-software/mago": 5
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {},

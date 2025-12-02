@@ -1,8 +1,5 @@
 {
     "name": "ewald/advent-of-code2025",
-    "require": {
-        "phpunit/phpunit": "^12.4"
-    },
     "autoload": {
         "psr-4": {
             "Ewald\\AdventOfCode2025\\": "src/"
@@ -13,5 +10,14 @@
             "name": "Ewald Börger",
             "email": "ewald.borger@novoserve.com"
         }
-    ]
+    ],
+    "require-dev": {
+        "carthage-software/mago": "^1.0.0-rc.6",
+        "phpunit/phpunit": "^12.4"
+    },
+    "config": {
+        "allow-plugins": {
+            "carthage-software/mago": true
+        }
+    }
 }
