@@ -1,0 +1,17 @@
+{
+    "name": "ewald/advent-of-code2025",
+    "require": {
+        "phpunit/phpunit": "^12.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ewald\\AdventOfCode2025\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ewald Börger",
+            "email": "ewald.borger@novoserve.com"
+        }
+    ]
+}
