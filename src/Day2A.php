@@ -2,7 +2,7 @@
 
 namespace Ewald\AdventOfCode2025;
 
-class Day2a extends DayBase
+class Day2A extends DayBase
 {
     public function run(string $input): int
     {
@@ -31,9 +31,11 @@ class Day2a extends DayBase
         $this->log[] = "{$start} - {$end} = " . count($all);
         $wrongIds = [];
         foreach ($all as $id) {
-            if ($this->isWrongId($id)) {
-                $wrongIds[] = $id;
+            if (!$this->isWrongId($id)) {
+                continue;
             }
+
+            $wrongIds[] = $id;
         }
         return $wrongIds;
     }

@@ -5,5 +5,5 @@ require_once 'vendor/autoload.php';
 
 // answer: 19219508902
 
-$sum = new \Ewald\AdventOfCode2025\Day2a()->run(file_get_contents('inputs/day2.txt') ?: "");
+$sum = (new \Ewald\AdventOfCode2025\Day2A())->run(file_get_contents('inputs/day2.txt') ?: '');
 echo "\nSum is {$sum}\n";

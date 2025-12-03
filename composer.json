@@ -21,35 +21,26 @@
     }
   },
   "scripts": {
-    "lint": "mago lint",
-    "lint-fix": "mago lint --fix",
-    "paratest:coverage": [
-      "Composer\\Config::disableProcessTimeout",
-      "@putenv XDEBUG_MODE=coverage",
-      "paratest --testsuite all --configuration phpunit.dist.xml --passthru-php=\"'-dpcov.enabled=1' '-dpcov.directory=.' '-dpcov.exclude=~(vendor)~'\""
-    ],
-    "paratest:unit": [
-      "Composer\\Config::disableProcessTimeout",
-      "paratest --testsuite all --configuration phpunit.dist.xml --no-coverage"
-    ],
-    "analyze": "mago analyze",
-    "analyze-fix": "mago analyze --fix",
-    "style-check": "mago format --dry-run",
-    "style-fix": "mago format",
-    "code-check": [
-      "@lint",
-      "@analyze",
-      "@style-check"
-    ],
-    "code-fix": [
-      "@lint-fix",
-      "@analyze-fix",
-      "@style-fix"
-    ],
-    "code-baselines": [
+    "code:baselines": [
       "mago lint --generate-baseline",
       "mago analyze --generate-baseline"
     ],
-    "test:unit": "phpunit --testdox"
+    "code:check:lint": "mago lint",
+    "code:check:analyze": "mago analyze",
+    "code:check:style": "mago format --dry-run",
+    "code:check": [
+      "@code:check:lint",
+      "@code:check:analyze",
+      "@code:check:style"
+    ],
+    "code:fix:lint": "mago lint --fix",
+    "code:fix:analyze": "mago analyze --fix",
+    "code:fix:style": "mago format",
+    "code:fix": [
+      "@code:fix:lint",
+      "@code:fix:analyze",
+      "@code:fix:style"
+    ],
+    "test:unit": "phpunit --configuration phpunit.dist.xml --testdox"
   }
 }

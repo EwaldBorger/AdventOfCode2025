@@ -1,10 +1,10 @@
 # Welcome to Mago!
 # For full documentation, see https://mago.carthage.software/tools/overview
-php-version = "8.5.0"
+php-version = "8.3.28"
 
 [source]
 workspace = "."
-paths = ["src/"]
+paths = ["run/", "src/", "tests/"]
 includes = ["vendor"]
 excludes = []
 

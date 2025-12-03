@@ -7,5 +7,5 @@ require_once 'vendor/autoload.php';
 // not: 6627
 // it is: 6858
 
-$password = (new \Ewald\AdventOfCode2025\Day1b())->processStrings(file('inputs/day1.txt') ?: []);
+$password = (new \Ewald\AdventOfCode2025\Day1B())->processStrings(file('inputs/day1.txt') ?: []);
 echo "\nPassword is {$password}\n";

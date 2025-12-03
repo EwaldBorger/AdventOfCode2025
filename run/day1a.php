@@ -13,14 +13,14 @@ while (!feof($file)) {
     $line = trim($line);
 
     if (str_starts_with($line, 'L')) {
-        $clicks = ((int) str_replace('L', '', $line)) % 100;
+        $clicks = (int) str_replace('L', '', $line) % 100;
         $dial -= $clicks;
         if ($dial < 0) {
             $dial += 100;
         }
     }
     if (str_starts_with($line, 'R')) {
-        $clicks = ((int) str_replace('R', '', $line)) % 100;
+        $clicks = (int) str_replace('R', '', $line) % 100;
         $dial += $clicks;
         if ($dial > 99) {
             $dial -= 100;

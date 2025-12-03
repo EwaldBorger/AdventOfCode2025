@@ -2,7 +2,7 @@
 
 namespace Ewald\AdventOfCode2025;
 
-class Day2b extends Day2a
+class Day2B extends Day2A
 {
     #[\Override]
     public function isWrongId(int $id): bool

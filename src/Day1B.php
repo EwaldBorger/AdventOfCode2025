@@ -3,13 +3,22 @@
 // https://adventofcode.com/2025/day/1
 namespace Ewald\AdventOfCode2025;
 
-class Day1b extends DayBase
+class Day1B extends DayBase
 {
     public function getRotationsFromString(string $string): int
     {
         $multiplier = str_starts_with($string, 'L') ? -1 : 1;
         $rotations = (int) str_replace(['L', 'R'], '', $string);
         return $multiplier * $rotations;
+    }
+
+    /**
+     * @param string[] $input
+     * @return string
+     */
+    public function solve(array $input): string
+    {
+        return 'Answer is: ' . $this->processStrings($input);
     }
 
     /**
