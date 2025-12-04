@@ -10,7 +10,7 @@ since PHP3 as hobby and professionally since 2004.
 As a way for me to try out Gemini, I also feed just the puzzle to it (at work we've got a GSuite license), but only
 AFTER I solved it myself first. Just two days in I'm impressed with it, only using the 'fast' mode, not even '3 Pro'.
 
-**Current score: 4⭐**
+**Current score: 6⭐**
 
 <!-- TOC -->
 * [Advent of Code 2025](#advent-of-code-2025)
@@ -20,6 +20,9 @@ AFTER I solved it myself first. Just two days in I'm impressed with it, only usi
   * [Day 2](#day-2)
     * [Part 1 ⭐](#part-1--1)
     * [Part 2 ⭐](#part-2--1)
+  * [Day 3](#day-3)
+    * [Part 1 ⭐](#part-1--2)
+    * [Part 2 ⭐](#part-2--2)
   * [Runtimes](#runtimes)
 <!-- TOC -->
 
@@ -58,6 +61,18 @@ This was just the same, I even only extended my first solution and just split it
 count unique blocks.
 
 Gemini had no issues in this part and its solution is a lot faster than mine.
+
+## Day 3
+
+### Part 1 ⭐
+
+Needed three tries, even though the second was dumb to submit because it was higher than the previous one that already
+was too high. Got another off by one I think, were I got higher numbers than possible.
+
+### Part 2 ⭐
+
+Took some runs of the unit tests, but able to submit the right answer in one try.
+
 
 ## Runtimes
 
