@@ -10,19 +10,24 @@ since PHP3 as hobby and professionally since 2004.
 As a way for me to try out Gemini, I also feed just the puzzle to it (at work we've got a GSuite license), but only
 AFTER I solved it myself first. Just two days in I'm impressed with it, only using the 'fast' mode, not even '3 Pro'.
 
-**Current score: 6⭐**
+**Current score: 8⭐**
+
+Answers in the titles, because your answer will be different because your input will be different :)
 
 <!-- TOC -->
 * [Advent of Code 2025](#advent-of-code-2025)
   * [Day 1](#day-1)
-    * [Part 1 ⭐](#part-1-)
-    * [Part 2 ⭐](#part-2-)
+    * [Part 1 ⭐ 1191](#part-1--1191)
+    * [Part 2 ⭐ 6858](#part-2--6858)
   * [Day 2](#day-2)
-    * [Part 1 ⭐](#part-1--1)
-    * [Part 2 ⭐](#part-2--1)
+    * [Part 1 ⭐ 19219508902](#part-1--19219508902)
+    * [Part 2 ⭐ 27180728081](#part-2--27180728081)
   * [Day 3](#day-3)
-    * [Part 1 ⭐](#part-1--2)
-    * [Part 2 ⭐](#part-2--2)
+    * [Part 1 ⭐ 17613](#part-1--17613)
+    * [Part 2 ⭐ 175304218462560](#part-2--175304218462560)
+  * [Day 4](#day-4)
+    * [Part 1 ⭐ 1449](#part-1--1449)
+    * [Part 2 ⭐ 8746](#part-2--8746)
   * [Runtimes](#runtimes)
 <!-- TOC -->
 
@@ -74,6 +79,23 @@ was too high. Got another off by one I think, were I got higher numbers than pos
 
 Took some runs of the unit tests, but able to submit the right answer in one try.
 
+## Day 4
+
+### Part 1 ⭐ 1449
+
+That took a bit and in the end it was just a boolean part without braces that cost me some frustration.
+Started from just the example and only downloaded the input file when my tests worked.
+Had the right answer at the first try.
+
+### Part 2 ⭐ 8746
+
+Expected to fail at least once, but just adding an outer loop and a remove function was enough as I was already marking
+the rolls that can be removed.
+Correct answer at first attempt, again after first making sure the example worked in my tests.
+
+Probably again not the most optimized code, but I just like to be able to read my code.
+Although, if you would do some fancy bit flipping, you would have to create masks to mark and delete rolls... just not
+my thing :)
 
 ## Runtimes
 
@@ -83,6 +105,7 @@ Took some runs of the unit tests, but able to submit the right answer in one try
 | 1-2    | 8        | 2            | 0m0,083s   | 0m0,056s       |
 | 2-1    | 1        | 3            | 0m2,263s   | 0m2,797s       |
 | 2-2    | 1        | 1            | 0m12,895s  | 0m2,830s       |
-|        |          |              |            |                |
-|        |          |              |            |                |
-|        |          |              |            |                |
+| 3-1    | 3        |              | 0m0,146s   |                |
+| 3-2    | 1        |              | 0m0,088s   |                |
+| 4-1    | 1        |              | 0m0,361s   |                |
+| 4-2    | 1        |              | 0m8,387s   |                |
