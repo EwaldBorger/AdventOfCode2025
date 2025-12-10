@@ -1,22 +1,24 @@
 <?php declare(strict_types=1);
 
-use Ewald\AdventOfCode2025\Day1B;
+namespace Ewald\AdventOfCode2025\Tests\Day1;
+
+use Ewald\AdventOfCode2025\Day1\Day1Part2;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
-class Day1bTest extends TestCase
+class Day1Part2Test extends TestCase
 {
     #[DataProvider('provideRotations')]
     public function testGetRotationsFromString(string $input, int $rotation): void
     {
-        $this->assertSame((new Day1B())->getRotationsFromString($input), $rotation);
+        $this->assertSame((new Day1Part2())->getRotationsFromString($input), $rotation);
     }
 
     #[DataProvider('provideBasic')]
     public function testProcessLines(array $input, int $out): void
     {
-        $day1b = new Day1B();
-        $this->assertSame($out, $day1b->processStrings($input), $day1b->getLog());
+        $day1b = new Day1Part2();
+        $this->assertSame($out, $day1b->solve($input), $day1b->getLog());
     }
 
     /**

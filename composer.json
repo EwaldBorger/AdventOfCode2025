@@ -2,7 +2,8 @@
   "name": "ewald/advent-of-code2025",
   "autoload": {
     "psr-4": {
-      "Ewald\\AdventOfCode2025\\": "src/"
+      "Ewald\\AdventOfCode2025\\": "src/",
+      "Ewald\\AdventOfCode2025\\Tests\\": "tests/"
     }
   },
   "authors": [

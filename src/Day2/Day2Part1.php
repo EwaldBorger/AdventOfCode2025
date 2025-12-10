@@ -1,12 +1,15 @@
 <?php declare(strict_types=1);
 
-namespace Ewald\AdventOfCode2025;
+namespace Ewald\AdventOfCode2025\Day2;
 
-class Day2A extends DayBase
+use Ewald\AdventOfCode2025\DayBase;
+
+class Day2Part1 extends DayBase
 {
-    public function run(string $input): int
+    #[\Override]
+    public function solve(array $input): int
     {
-        $ranges = explode(',', $input);
+        $ranges = explode(',', implode("\n", $input));
         $sum = 0;
         foreach ($ranges as $range) {
             $ids = $this->getWrongIdsFromRange($range);

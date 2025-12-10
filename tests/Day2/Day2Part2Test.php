@@ -1,30 +1,32 @@
 <?php declare(strict_types=1);
 
-use Ewald\AdventOfCode2025\Day2A;
+namespace Ewald\AdventOfCode2025\Tests\Day2;
+
+use Ewald\AdventOfCode2025\Day2\Day2Part2;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
-class Day2aTest extends TestCase
+class Day2Part2Test extends TestCase
 {
     #[DataProvider('provideWrongIds')]
     public function testIsWrongId(int $input, bool $out): void
     {
-        $day2a = new Day2A();
-        $this->assertSame($out, $day2a->isWrongId($input), $day2a->getLog());
+        $day2b = new Day2Part2();
+        $this->assertSame($out, $day2b->isWrongId($input), $day2b->getLog());
     }
 
     #[DataProvider('provideBasic')]
     public function testGetWrongIds(string $input, array $out): void
     {
-        $day2a = new Day2A();
-        $this->assertSame($out, $day2a->getWrongIdsFromRange($input), $day2a->getLog());
+        $day2b = new Day2Part2();
+        $this->assertSame($out, $day2b->getWrongIdsFromRange($input), $day2b->getLog());
     }
 
     public function testWithExample(): void
     {
-        $day2a = new Day2A();
+        $day2b = new Day2Part2();
         $example = '11-22,95-115,998-1012,1188511880-1188511890,222220-222224,1698522-1698528,446443-446449,38593856-38593862,565653-565659,824824821-824824827,2121212118-2121212124';
-        $this->assertSame(1227775554, $day2a->run($example), $day2a->getLog());
+        $this->assertSame(4174379265, $day2b->run($example), $day2b->getLog());
     }
 
     /**
@@ -47,6 +49,10 @@ class Day2aTest extends TestCase
         yield '222222' => [222222, true];
         yield '446446' => [446446, true];
         yield '38593859' => [38593859, true];
+        yield '12341234' => [12341234, true];
+        yield '123123123' => [123123123, true];
+        yield '1212121212' => [12121212, true];
+        yield '1111111' => [1111111, true];
     }
 
     /**
@@ -55,12 +61,15 @@ class Day2aTest extends TestCase
     public static function provideBasic(): iterable
     {
         yield '11-22 has two invalid IDs, 11 and 22' => ['11-22', [11, 22]];
-        yield '95-115 has one invalid ID, 99' => ['95-115', [99]];
-        yield '998-1012 has one invalid ID, 1010' => ['998-1012', [1010]];
+        yield '95-115 has one invalid ID, 99' => ['95-115', [99, 111]];
+        yield '998-1012 has one invalid ID, 1010' => ['998-1012', [999, 1010]];
         yield '1188511880-1188511890 has one invalid ID, 1188511885' => ['1188511880-1188511890', [1188511885]];
         yield '222220-222224 has one invalid ID, 222222' => ['222220-222224', [222222]];
         yield '1698522-1698528 contains no invalid IDs' => ['1698522-1698528', []];
         yield '446443-446449 has one invalid ID, 446446' => ['446443-446449', [446446]];
         yield '38593856-38593862 has one invalid ID, 38593859' => ['38593856-38593862', [38593859]];
+        yield '565653-565659 now has one invalid ID, 565656' => ['565653-565659', [565656]];
+        yield '824824821-824824827 now has one invalid ID, 824824824' => ['824824821-824824827', [824824824]];
+        yield '2121212118-2121212124 now has one invalid ID, 2121212121' => ['2121212118-2121212124', [2121212121]];
     }
 }

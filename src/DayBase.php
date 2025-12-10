@@ -2,7 +2,7 @@
 
 namespace Ewald\AdventOfCode2025;
 
-class DayBase
+abstract class DayBase
 {
     /**
      * @var string[]
@@ -13,4 +13,10 @@ class DayBase
     {
         return implode("\n", $this->log);
     }
+
+    /**
+     * @param string[] $input
+     * @return int
+     */
+    abstract public function solve(array $input): int;
 }

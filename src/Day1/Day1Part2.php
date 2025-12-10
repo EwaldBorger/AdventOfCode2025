@@ -1,9 +1,10 @@
 <?php declare(strict_types=1);
 
-// https://adventofcode.com/2025/day/1
-namespace Ewald\AdventOfCode2025;
+namespace Ewald\AdventOfCode2025\Day1;
 
-class Day1B extends DayBase
+use Ewald\AdventOfCode2025\DayBase;
+
+class Day1Part2 extends DayBase
 {
     public function getRotationsFromString(string $string): int
     {
@@ -12,26 +13,14 @@ class Day1B extends DayBase
         return $multiplier * $rotations;
     }
 
-    /**
-     * @param string[] $input
-     * @return string
-     */
-    public function solve(array $input): string
-    {
-        return 'Answer is: ' . $this->processStrings($input);
-    }
-
-    /**
-     * @param string[] $strings
-     * @return int
-     */
-    public function processStrings(array $strings): int
+    #[\Override]
+    public function solve(array $input): int
     {
         $previous = ['dial' => 50, 'seenZero' => 0];
         $new = $previous;
         $count = 0;
 
-        foreach ($strings as $string) {
+        foreach ($input as $string) {
             $this->log[] = $string;
             $new = $this->processRotation($previous['dial'], $this->getRotationsFromString($string));
             $previous = $new;

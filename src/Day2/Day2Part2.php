@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace Ewald\AdventOfCode2025;
+namespace Ewald\AdventOfCode2025\Day2;
 
-class Day2B extends Day2A
+class Day2Part2 extends Day2Part1
 {
     #[\Override]
     public function isWrongId(int $id): bool

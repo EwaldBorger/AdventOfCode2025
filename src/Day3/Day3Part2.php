@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace Ewald\AdventOfCode2025;
+namespace Ewald\AdventOfCode2025\Day3;
 
-class Day3B extends Day3A
+class Day3Part2 extends Day3Part1
 {
     // should still fit in a 64bit php int, int max is a number of 20 digits, testset has 200 lines and each number is 12 digits
     #[\Override]
@@ -18,7 +18,7 @@ class Day3B extends Day3A
         $n = count($a) - ($length - 1);
         $max = 0;
         $maxPos = 0;
-        $checked = "";
+        $checked = '';
         for ($i = 0; $i < $n; $i++) {
             if ($a[$i] > $max) {
                 $max = $a[$i];
@@ -26,10 +26,10 @@ class Day3B extends Day3A
             }
             $checked .= $a[$i];
         }
-        $toTheRight = substr($in, $maxPos+1);
+        $toTheRight = substr($in, $maxPos + 1);
         $newLength = $length - 1;
         $this->log[] = "{$checked} {$max} {$toTheRight}";
 
-        return (int)($max) * 10 ** ($length - 1) + $this->getHighestJoltage($toTheRight, $newLength);
+        return ((int) $max * (10 ** ($length - 1))) + $this->getHighestJoltage($toTheRight, $newLength);
     }
 }
