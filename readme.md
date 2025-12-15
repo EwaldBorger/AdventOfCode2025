@@ -9,8 +9,9 @@ since PHP3 as hobby and professionally since 2004.
 
 As a way for me to try out Gemini, I also feed just the puzzle to it (at work we've got a GSuite license), but only
 AFTER I solved it myself first. Just two days in I'm impressed with it, only using the 'fast' mode, not even '3 Pro'.
+By now, I've switched it to 3-pro and it has solved everything in the first attempt so far.
 
-**Current score: 8⭐**
+**Current score: 10⭐**
 
 Answers in the titles, because your answer will be different because your input will be different :)
 
