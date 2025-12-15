@@ -1,10 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace Ewald\AdventOfCode2025\Tests\Day4;
+namespace Ewald\AdventOfCode2025\Tests\Day5;
 
-use Ewald\AdventOfCode2025\Day4\Day4Part1;
 use Ewald\AdventOfCode2025\Day5\Day5Part1;
-use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 class Day5Part1Test extends TestCase
@@ -27,25 +25,29 @@ class Day5Part1Test extends TestCase
     {
         $instance = new Day5Part1();
         $instance->readInput($this->example);
-        $this->assertEquals([
-            '3' => [
-                ['3', '5'],
+        $this->assertEquals(
+            [
+                '3' => [
+                    ['3', '5'],
+                ],
+                '4' => [
+                    ['3', '5'],
+                ],
+                '5' => [
+                    ['3', '5'],
+                ],
+                '1' => [
+                    ['10', '14'],
+                    ['16', '20'],
+                    ['12', '18'],
+                ],
+                '2' => [
+                    ['16', '20'],
+                ],
             ],
-            '4' => [
-                ['3', '5'],
-            ],
-            '5' => [
-                ['3', '5'],
-            ],
-            '1' => [
-                ['10', '14'],
-                ['16', '20'],
-                ['12', '18'],
-            ],
-            '2' => [
-                ['16', '20'],
-            ]
-        ], $instance->fresh, 'fresh ' . $instance->getLog());
+            $instance->fresh,
+            'fresh ' . $instance->getLog(),
+        );
         $this->assertEquals([1, 5, 8, 11, 17, 32], $instance->available, 'available ' . $instance->getLog());
     }
 

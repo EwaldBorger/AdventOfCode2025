@@ -59,10 +59,12 @@ class Day5Part1 extends DayBase
                 continue;
             }
             foreach ($this->fresh[$initial] as $freshRule) {
-                if ($id >= $freshRule[0] && $id <= $freshRule[1]) {
-                    $count++;
-                    break;
+                if (!($id >= $freshRule[0] && $id <= $freshRule[1])) {
+                    continue;
                 }
+
+                $count++;
+                break;
             }
         }
         return $count;
