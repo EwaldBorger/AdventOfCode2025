@@ -26,37 +26,43 @@ class Day5Part1 extends DayBase
                 $fresh = false;
                 continue;
             }
-            if (str_contains($line, '-')) {
-                list($start, $end) = explode('-', $line);
-                $range = range((int)$start, (int)$end, 1);
-                $this->log[] = 'range- ' . implode(',', $range);
-            } else {
-                $range = [(int)$line];
-                $this->log[] = 'range1 ' . implode(',', $range);
-            }
             if ($fresh) {
-                $this->fresh = array_merge($this->fresh, $range);
-                $this->log[] = 'fresh = ' . implode(',', $this->fresh);
-
+                $this->addLineToFresh($line);
             } else {
-                $this->available = array_merge($this->available, $range);
-                $this->log[] = 'available = ' . implode(',', $this->available);
-
+                $this->available[] = $line;
             }
         }
-        $this->log[] = 'fresh total = ' . implode(',', $this->fresh);
-        $this->fresh = array_unique($this->fresh);
-        $this->log[] = 'fresh unique = ' . implode(',', $this->fresh);
-        sort($this->fresh);
-        $this->log[] = 'fresh end = ' . implode(',', $this->fresh);
+    }
+
+    public function addLineToFresh(string $line): void
+    {
+        if (str_contains($line, '-')) {
+            list($start, $end) = explode('-', $line);
+        } else {
+            $start = $end = $line;
+        }
+        $initials = range(substr($start, 0, 1), substr($end, 0, 1));
+        foreach ($initials as $initial) {
+            if (!isset($this->fresh[$initial])) {
+                $this->fresh[$initial] = [];
+            }
+            $this->fresh[$initial][] = [$start, $end];
+        }
     }
 
     public function countFresh(): int
     {
         $count = 0;
         foreach ($this->available as $id) {
-            if (in_array($id, $this->fresh)) {
-                $count++;
+            $initial = substr($id, 0, 1);
+            if (!isset($this->fresh[$initial])) {
+                continue;
+            }
+            foreach ($this->fresh[$initial] as $freshRule) {
+                if ($id >= $freshRule[0] && $id <= $freshRule[1]) {
+                    $count++;
+                    break;
+                }
             }
         }
         return $count;

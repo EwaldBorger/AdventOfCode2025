@@ -15,20 +15,22 @@ AFTER I solved it myself first. Just two days in I'm impressed with it, only usi
 Answers in the titles, because your answer will be different because your input will be different :)
 
 <!-- TOC -->
+
 * [Advent of Code 2025](#advent-of-code-2025)
-  * [Day 1](#day-1)
-    * [Part 1 ⭐ 1191](#part-1--1191)
-    * [Part 2 ⭐ 6858](#part-2--6858)
-  * [Day 2](#day-2)
-    * [Part 1 ⭐ 19219508902](#part-1--19219508902)
-    * [Part 2 ⭐ 27180728081](#part-2--27180728081)
-  * [Day 3](#day-3)
-    * [Part 1 ⭐ 17613](#part-1--17613)
-    * [Part 2 ⭐ 175304218462560](#part-2--175304218462560)
-  * [Day 4](#day-4)
-    * [Part 1 ⭐ 1449](#part-1--1449)
-    * [Part 2 ⭐ 8746](#part-2--8746)
-  * [Runtimes](#runtimes)
+    * [Day 1](#day-1)
+        * [Part 1 ⭐ 1191](#part-1--1191)
+        * [Part 2 ⭐ 6858](#part-2--6858)
+    * [Day 2](#day-2)
+        * [Part 1 ⭐ 19219508902](#part-1--19219508902)
+        * [Part 2 ⭐ 27180728081](#part-2--27180728081)
+    * [Day 3](#day-3)
+        * [Part 1 ⭐ 17613](#part-1--17613)
+        * [Part 2 ⭐ 175304218462560](#part-2--175304218462560)
+    * [Day 4](#day-4)
+        * [Part 1 ⭐ 1449](#part-1--1449)
+        * [Part 2 ⭐ 8746](#part-2--8746)
+    * [Runtimes](#runtimes)
+
 <!-- TOC -->
 
 ## Day 1
@@ -97,6 +99,16 @@ Probably again not the most optimized code, but I just like to be able to read m
 Although, if you would do some fancy bit flipping, you would have to create masks to mark and delete rolls... just not
 my thing :)
 
+## Day 5
+
+### Part 1 ⭐ 690
+
+Had a nice start, unit tests worked perfectly on the example input. Got the actual input: fail. Maximum array size.
+So the plan of generating all ID's in a range failed there.
+
+Rewrote it to have rules based on start and end, and categorize them by initial.
+This might have been a bit overboard, but worked.
+
 ## Runtimes
 
 | Puzzle | Tries me | Tries gemini | Runtime me | Runtime gemini |
@@ -109,3 +121,4 @@ my thing :)
 | 3-2    | 1        |              | 0m0,088s   |                |
 | 4-1    | 1        |              | 0m0,361s   |                |
 | 4-2    | 1        |              | 0m8,387s   |                |
+| 5-1    | 1        |              | 0m0,070s   |                |
