@@ -15,22 +15,23 @@ AFTER I solved it myself first. Just two days in I'm impressed with it, only usi
 Answers in the titles, because your answer will be different because your input will be different :)
 
 <!-- TOC -->
-
 * [Advent of Code 2025](#advent-of-code-2025)
-    * [Day 1](#day-1)
-        * [Part 1 ⭐ 1191](#part-1--1191)
-        * [Part 2 ⭐ 6858](#part-2--6858)
-    * [Day 2](#day-2)
-        * [Part 1 ⭐ 19219508902](#part-1--19219508902)
-        * [Part 2 ⭐ 27180728081](#part-2--27180728081)
-    * [Day 3](#day-3)
-        * [Part 1 ⭐ 17613](#part-1--17613)
-        * [Part 2 ⭐ 175304218462560](#part-2--175304218462560)
-    * [Day 4](#day-4)
-        * [Part 1 ⭐ 1449](#part-1--1449)
-        * [Part 2 ⭐ 8746](#part-2--8746)
-    * [Runtimes](#runtimes)
-
+  * [Day 1](#day-1)
+    * [Part 1 ⭐ 1191](#part-1--1191)
+    * [Part 2 ⭐ 6858](#part-2--6858)
+  * [Day 2](#day-2)
+    * [Part 1 ⭐ 19219508902](#part-1--19219508902)
+    * [Part 2 ⭐ 27180728081](#part-2--27180728081)
+  * [Day 3](#day-3)
+    * [Part 1 ⭐ 17613](#part-1--17613)
+    * [Part 2 ⭐ 175304218462560](#part-2--175304218462560)
+  * [Day 4](#day-4)
+    * [Part 1 ⭐ 1449](#part-1--1449)
+    * [Part 2 ⭐ 8746](#part-2--8746)
+  * [Day 5](#day-5)
+    * [Part 1 ⭐ 690](#part-1--690)
+    * [Part 2 ⭐ 344323629240733](#part-2--344323629240733)
+  * [Runtimes](#runtimes)
 <!-- TOC -->
 
 ## Day 1
@@ -106,8 +107,15 @@ my thing :)
 Had a nice start, unit tests worked perfectly on the example input. Got the actual input: fail. Maximum array size.
 So the plan of generating all ID's in a range failed there.
 
-Rewrote it to have rules based on start and end, and categorize them by initial.
+Rewrote it to have rules based on start and end, and categorize them by initial, kind of bucket just in case.
 This might have been a bit overboard, but worked.
+
+### Part 2 ⭐ 344323629240733
+
+That was a more difficult one, not sure if I would have gotten an answer if I hadn't looked at some of the
+tutorial/visualizer posts in the subreddit.
+The hint there was to first just get all the start and end (+1!!!) points and go through them to build bigger intervals
+or just count them directly.
 
 ## Runtimes
 
@@ -117,8 +125,9 @@ This might have been a bit overboard, but worked.
 | 1-2    | 8        | 2            | 0m0,083s   | 0m0,056s       |
 | 2-1    | 1        | 3            | 0m2,263s   | 0m2,797s       |
 | 2-2    | 1        | 1            | 0m12,895s  | 0m2,830s       |
-| 3-1    | 3        |              | 0m0,146s   |                |
-| 3-2    | 1        |              | 0m0,088s   |                |
-| 4-1    | 1        |              | 0m0,361s   |                |
-| 4-2    | 1        |              | 0m8,387s   |                |
-| 5-1    | 1        |              | 0m0,070s   |                |
+| 3-1    | 3        | 1            | 0m0,146s   | 0m0,557s       |
+| 3-2    | 1        | 1            | 0m0,088s   | 0m0,078s       |
+| 4-1    | 1        | 1            | 0m0,361s   | 0m0,164s       |
+| 4-2    | 1        | 1            | 0m8,387s   | 0m3,000s       |
+| 5-1    | 1        | 1            | 0m0,070s   | 0m0,103s       |
+| 5-2    | 1        | 1            | 0m0,095s   | 0m0,061s       |
