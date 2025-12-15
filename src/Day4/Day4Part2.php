@@ -2,8 +2,6 @@
 
 namespace Ewald\AdventOfCode2025\Day4;
 
-use Ewald\AdventOfCode2025\DayBase;
-
 class Day4Part2 extends Day4Part1
 {
     #[\Override]
@@ -41,9 +39,11 @@ class Day4Part2 extends Day4Part1
     {
         foreach ($this->grid as $y => $row) {
             foreach ($row as $x => $cell) {
-                if ($cell === 2) {
-                    $this->grid[$y][$x] = 0;
+                if ($cell !== 2) {
+                    continue;
                 }
+
+                $this->grid[$y][$x] = 0;
             }
         }
     }

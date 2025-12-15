@@ -3,7 +3,6 @@
 namespace Ewald\AdventOfCode2025\Tests\Day4;
 
 use Ewald\AdventOfCode2025\Day4\Day4Part1;
-use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 class Day4Part1Test extends TestCase
