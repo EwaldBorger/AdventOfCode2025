@@ -39,7 +39,6 @@ class Day4Part1 extends DayBase
                     $adjacentRolls++;
                 } else {
                     $this->log[] = "checking $x,$y with $leftRight,$upDown = $nx,$ny = empty";
-
                 }
             }
         }
