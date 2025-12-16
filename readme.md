@@ -9,32 +9,33 @@ since PHP3 as hobby and professionally since 2004.
 
 As a way for me to try out Gemini, I also feed just the puzzle to it (at work we've got a GSuite license), but only
 AFTER I solved it myself first. Just two days in I'm impressed with it, only using the 'fast' mode, not even '3 Pro'.
-By now, I've switched it to 3-pro and it has solved everything in the first attempt so far.
+By now, I've switched it to 3-pro, and it has solved everything in the first attempt so far.
 
-**Current score: 10⭐**
+**Current score: 12⭐**
 
 Answers in the titles, because your answer will be different because your input will be different :)
 
 <!-- TOC -->
-
 * [Advent of Code 2025](#advent-of-code-2025)
-    * [Day 1](#day-1)
-        * [Part 1 ⭐ 1191](#part-1--1191)
-        * [Part 2 ⭐ 6858](#part-2--6858)
-    * [Day 2](#day-2)
-        * [Part 1 ⭐ 19219508902](#part-1--19219508902)
-        * [Part 2 ⭐ 27180728081](#part-2--27180728081)
-    * [Day 3](#day-3)
-        * [Part 1 ⭐ 17613](#part-1--17613)
-        * [Part 2 ⭐ 175304218462560](#part-2--175304218462560)
-    * [Day 4](#day-4)
-        * [Part 1 ⭐ 1449](#part-1--1449)
-        * [Part 2 ⭐ 8746](#part-2--8746)
-    * [Day 5](#day-5)
-        * [Part 1 ⭐ 690](#part-1--690)
-        * [Part 2 ⭐ 344323629240733](#part-2--344323629240733)
-    * [Runtimes](#runtimes)
-
+  * [Day 1](#day-1)
+    * [Part 1 ⭐ 1191](#part-1--1191)
+    * [Part 2 ⭐ 6858](#part-2--6858)
+  * [Day 2](#day-2)
+    * [Part 1 ⭐ 19219508902](#part-1--19219508902)
+    * [Part 2 ⭐ 27180728081](#part-2--27180728081)
+  * [Day 3](#day-3)
+    * [Part 1 ⭐ 17613](#part-1--17613)
+    * [Part 2 ⭐ 175304218462560](#part-2--175304218462560)
+  * [Day 4](#day-4)
+    * [Part 1 ⭐ 1449](#part-1--1449)
+    * [Part 2 ⭐ 8746](#part-2--8746)
+  * [Day 5](#day-5)
+    * [Part 1 ⭐ 690](#part-1--690)
+    * [Part 2 ⭐ 344323629240733](#part-2--344323629240733)
+  * [Day 6](#day-6)
+    * [Part 1 ⭐ 4364617236318](#part-1--4364617236318)
+    * [Part 2 ⭐ 9077004354241](#part-2--9077004354241)
+  * [Runtimes](#runtimes)
 <!-- TOC -->
 
 ## Day 1
@@ -128,6 +129,9 @@ That was kinda straight forward: keep reading each line, collapse separators and
 align.
 Opted to first make a todo list and then go through it to calculate, could have been done in one pass.
 
+For gemini, the 4 tries was my bad... they all returned a wrong answer, but the test input was just formatted wrong...
+after fixing attempts 1, 2 and 4 just worked correctly on the test input and day6.txt.
+
 ### Part 2 ⭐ 9077004354241
 
 Well, that took some head scratching. I know there are ways to rotate arrays and such, ended up just looping a lot.
@@ -136,6 +140,12 @@ First try was too low: 9073232336305, although the example input worked.
 So back to the debugging to see if everything was calculated.
 Found out that I missed the first (technically last) one, because of how the example input ended.
 First found the right answer then fixed the test to behave the same.
+
+Gemini had it right on the first try, but I asked it what it would think the answer would be (given the day6.txt).
+It failed, I gave it the right answer, and it fixed the code by just putting in an echo with the right answer :D
+
+I then asked if it could give me the actual sub problems, it could not at first. I then gave it the 4 right most
+problems and asked for the fifth. It delivered.
 
 ## Runtimes
 
@@ -151,5 +161,5 @@ First found the right answer then fixed the test to behave the same.
 | 4-2    | 1        | 1            | 0m8,387s   | 0m3,000s       |
 | 5-1    | 1        | 1            | 0m0,070s   | 0m0,103s       |
 | 5-2    | 1        | 1            | 0m0,095s   | 0m0,061s       |
-| 6-1    | 1        |              | 0m0,075s   |                |
-| 6-2    |          |              | 0m0,073s   |                |
+| 6-1    | 1        | 1 (4)        | 0m0,075s   | 0m0,069s       |
+| 6-2    | 1        | 1            | 0m0,073s   | 0m0,086s       |
