@@ -16,26 +16,28 @@ By now, I've switched it to 3-pro, and it has solved everything in the first att
 Answers in the titles, because your answer will be different because your input will be different :)
 
 <!-- TOC -->
+
 * [Advent of Code 2025](#advent-of-code-2025)
-  * [Day 1](#day-1)
-    * [Part 1 ⭐ 1191](#part-1--1191)
-    * [Part 2 ⭐ 6858](#part-2--6858)
-  * [Day 2](#day-2)
-    * [Part 1 ⭐ 19219508902](#part-1--19219508902)
-    * [Part 2 ⭐ 27180728081](#part-2--27180728081)
-  * [Day 3](#day-3)
-    * [Part 1 ⭐ 17613](#part-1--17613)
-    * [Part 2 ⭐ 175304218462560](#part-2--175304218462560)
-  * [Day 4](#day-4)
-    * [Part 1 ⭐ 1449](#part-1--1449)
-    * [Part 2 ⭐ 8746](#part-2--8746)
-  * [Day 5](#day-5)
-    * [Part 1 ⭐ 690](#part-1--690)
-    * [Part 2 ⭐ 344323629240733](#part-2--344323629240733)
-  * [Day 6](#day-6)
-    * [Part 1 ⭐ 4364617236318](#part-1--4364617236318)
-    * [Part 2 ⭐ 9077004354241](#part-2--9077004354241)
-  * [Runtimes](#runtimes)
+    * [Day 1](#day-1)
+        * [Part 1 ⭐ 1191](#part-1--1191)
+        * [Part 2 ⭐ 6858](#part-2--6858)
+    * [Day 2](#day-2)
+        * [Part 1 ⭐ 19219508902](#part-1--19219508902)
+        * [Part 2 ⭐ 27180728081](#part-2--27180728081)
+    * [Day 3](#day-3)
+        * [Part 1 ⭐ 17613](#part-1--17613)
+        * [Part 2 ⭐ 175304218462560](#part-2--175304218462560)
+    * [Day 4](#day-4)
+        * [Part 1 ⭐ 1449](#part-1--1449)
+        * [Part 2 ⭐ 8746](#part-2--8746)
+    * [Day 5](#day-5)
+        * [Part 1 ⭐ 690](#part-1--690)
+        * [Part 2 ⭐ 344323629240733](#part-2--344323629240733)
+    * [Day 6](#day-6)
+        * [Part 1 ⭐ 4364617236318](#part-1--4364617236318)
+        * [Part 2 ⭐ 9077004354241](#part-2--9077004354241)
+    * [Runtimes](#runtimes)
+
 <!-- TOC -->
 
 ## Day 1
@@ -147,6 +149,19 @@ It failed, I gave it the right answer, and it fixed the code by just putting in 
 I then asked if it could give me the actual sub problems, it could not at first. I then gave it the 4 right most
 problems and asked for the fifth. It delivered.
 
+## Day 7
+
+### Part 1 ⭐ 1490
+
+Yeah, pretty straight forward. I went for keeping a list of beam positions and then checking each line if they hit a
+splitter.
+First misread that I needed to output the number of beams :D
+
+### Part 2 ⭐
+
+Ah, need to rewrite to something recursive. Smells like a path finding algorithm, I'm just not good at remembering
+algorithms... oh well :shrug:.
+
 ## Runtimes
 
 | Puzzle | Tries me | Tries gemini | Runtime me | Runtime gemini |
@@ -163,3 +178,5 @@ problems and asked for the fifth. It delivered.
 | 5-2    | 1        | 1            | 0m0,095s   | 0m0,061s       |
 | 6-1    | 1        | 1 (4)        | 0m0,075s   | 0m0,069s       |
 | 6-2    | 1        | 1            | 0m0,073s   | 0m0,086s       |
+| 7-1    | 1        |              | 0m0,062s   |                |
+| 7-2    |          |              |            |                |
