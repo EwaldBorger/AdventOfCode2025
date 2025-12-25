@@ -21,15 +21,17 @@ class Day7Part1 extends DayBase
             $lineArray = str_split($line);
             foreach ($beams as $beam => $count) {
                 //$this->log[] = "$line beam $beam hits {$lineArray[$beam]}";
-                if ($lineArray[$beam] === '^') {
-                    $countSplits++;
-                    unset($beams[$beam]);
-                    if ($beam - 1 >= 0) {
-                        $beams[$beam - 1] = 1;
-                    }
-                    if ($beam + 1 <= $max) {
-                        $beams[$beam + 1] = 1;
-                    }
+                if ($lineArray[$beam] !== '^') {
+                    continue;
+                }
+
+                $countSplits++;
+                unset($beams[$beam]);
+                if (($beam - 1) >= 0) {
+                    $beams[$beam - 1] = 1;
+                }
+                if (($beam + 1) <= $max) {
+                    $beams[$beam + 1] = 1;
                 }
             }
             foreach ($beams as $beam => $count) {

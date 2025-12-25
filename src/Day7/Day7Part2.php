@@ -22,24 +22,28 @@ class Day7Part2 extends DayBase
 
     public function solver(int $level, int $beamPosition): int
     {
-        echo "$level $beamPosition\n";
-        if (isset($this->memo["{$level}{$beamPosition}"])) {
-            return $this->memo["{$level}{$beamPosition}"];
+        $key = "{$level}-{$beamPosition}";
+        if (isset($this->memo[$key])) {
+            echo "$level $beamPosition from memo\n";
+            return $this->memo[$key];
         }
         if (!isset($this->input[$level])) {
+            echo "$level $beamPosition outside level\n";
             return 1;
         }
         if (!isset($this->input[$level][$beamPosition])) {
+            echo "$level $beamPosition outside field\n";
             return 0;
         }
         if ($this->input[$level][$beamPosition] !== '^') {
+            echo "$level $beamPosition falling through\n";
             return $this->solver($level + 1, $beamPosition);
         }
+        echo "$level $beamPosition split\n";
         $leftLines = $this->solver($level + 1, $beamPosition - 1);
         $rightLines = $this->solver($level + 1, $beamPosition + 1);
         $total = $leftLines + $rightLines;
-        $this->memo["{$level}{$beamPosition}"] = $total;
+        $this->memo[$key] = $total;
         return $total;
     }
-
 }

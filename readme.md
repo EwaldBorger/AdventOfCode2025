@@ -11,33 +11,34 @@ As a way for me to try out Gemini, I also feed just the puzzle to it (at work we
 AFTER I solved it myself first. Just two days in I'm impressed with it, only using the 'fast' mode, not even '3 Pro'.
 By now, I've switched it to 3-pro, and it has solved everything in the first attempt so far.
 
-**Current score: 12⭐**
+**Current score: 14⭐**
 
 Answers in the titles, because your answer will be different because your input will be different :)
 
 <!-- TOC -->
-
 * [Advent of Code 2025](#advent-of-code-2025)
-    * [Day 1](#day-1)
-        * [Part 1 ⭐ 1191](#part-1--1191)
-        * [Part 2 ⭐ 6858](#part-2--6858)
-    * [Day 2](#day-2)
-        * [Part 1 ⭐ 19219508902](#part-1--19219508902)
-        * [Part 2 ⭐ 27180728081](#part-2--27180728081)
-    * [Day 3](#day-3)
-        * [Part 1 ⭐ 17613](#part-1--17613)
-        * [Part 2 ⭐ 175304218462560](#part-2--175304218462560)
-    * [Day 4](#day-4)
-        * [Part 1 ⭐ 1449](#part-1--1449)
-        * [Part 2 ⭐ 8746](#part-2--8746)
-    * [Day 5](#day-5)
-        * [Part 1 ⭐ 690](#part-1--690)
-        * [Part 2 ⭐ 344323629240733](#part-2--344323629240733)
-    * [Day 6](#day-6)
-        * [Part 1 ⭐ 4364617236318](#part-1--4364617236318)
-        * [Part 2 ⭐ 9077004354241](#part-2--9077004354241)
-    * [Runtimes](#runtimes)
-
+  * [Day 1](#day-1)
+    * [Part 1 ⭐ 1191](#part-1--1191)
+    * [Part 2 ⭐ 6858](#part-2--6858)
+  * [Day 2](#day-2)
+    * [Part 1 ⭐ 19219508902](#part-1--19219508902)
+    * [Part 2 ⭐ 27180728081](#part-2--27180728081)
+  * [Day 3](#day-3)
+    * [Part 1 ⭐ 17613](#part-1--17613)
+    * [Part 2 ⭐ 175304218462560](#part-2--175304218462560)
+  * [Day 4](#day-4)
+    * [Part 1 ⭐ 1449](#part-1--1449)
+    * [Part 2 ⭐ 8746](#part-2--8746)
+  * [Day 5](#day-5)
+    * [Part 1 ⭐ 690](#part-1--690)
+    * [Part 2 ⭐ 344323629240733](#part-2--344323629240733)
+  * [Day 6](#day-6)
+    * [Part 1 ⭐ 4364617236318](#part-1--4364617236318)
+    * [Part 2 ⭐ 9077004354241](#part-2--9077004354241)
+  * [Day 7](#day-7)
+    * [Part 1 ⭐ 1490](#part-1--1490)
+    * [Part 2 ⭐ 3806264447357](#part-2--3806264447357)
+  * [Runtimes](#runtimes)
 <!-- TOC -->
 
 ## Day 1
@@ -157,17 +158,20 @@ Yeah, pretty straight forward. I went for keeping a list of beam positions and t
 splitter.
 First misread that I needed to output the number of beams :D
 
-### Part 2 
+### Part 2 ⭐ 3806264447357
 
 Ah, need to rewrite to something recursive. Smells like a path finding algorithm, I'm just not good at remembering
 algorithms... oh well :shrug:.
 First attempt was a recursive function to just follow every beam path.
-Worked fine for the example, made my machine reach 100 degrees celcius on the actual input and after 5 minutes still had no answer.
+Worked fine for the example, made my machine reach 100 degrees celcius on the actual input and after 5 minutes still had
+no answer.
 So, that's not it.
 
-Added memoization, as per suggestions in the subreddit, but apparently not correctly yet: 
+Added memoization, as per suggestions in the subreddit, but apparently not correctly yet:
 3129507056344 gave "your answer is too low".
 
+Ah, stupid me, I concatted level and position without a separator... so 11111 was use for both 11-111 and 111-11.
+Fixed it and had the right answer.
 
 ## Runtimes
 
@@ -186,4 +190,4 @@ Added memoization, as per suggestions in the subreddit, but apparently not corre
 | 6-1    | 1        | 1 (4)        | 0m0,075s   | 0m0,069s       |
 | 6-2    | 1        | 1            | 0m0,073s   | 0m0,086s       |
 | 7-1    | 1        |              | 0m0,062s   |                |
-| 7-2    |          |              |            |                |
+| 7-2    | 3        |              | 0m0,181s   |                |
