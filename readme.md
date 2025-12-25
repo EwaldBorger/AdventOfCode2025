@@ -157,13 +157,17 @@ Yeah, pretty straight forward. I went for keeping a list of beam positions and t
 splitter.
 First misread that I needed to output the number of beams :D
 
-### Part 2 ⭐
+### Part 2 
 
 Ah, need to rewrite to something recursive. Smells like a path finding algorithm, I'm just not good at remembering
 algorithms... oh well :shrug:.
 First attempt was a recursive function to just follow every beam path.
 Worked fine for the example, made my machine reach 100 degrees celcius on the actual input and after 5 minutes still had no answer.
 So, that's not it.
+
+Added memoization, as per suggestions in the subreddit, but apparently not correctly yet: 
+3129507056344 gave "your answer is too low".
+
 
 ## Runtimes
 

@@ -7,6 +7,8 @@ use Ewald\AdventOfCode2025\DayBase;
 class Day7Part2 extends DayBase
 {
     public array $input = [];
+    public array $memo = [];
+
     #[\Override]
     public function solve(array $input): int
     {
@@ -20,20 +22,24 @@ class Day7Part2 extends DayBase
 
     public function solver(int $level, int $beamPosition): int
     {
+        echo "$level $beamPosition\n";
+        if (isset($this->memo["{$level}{$beamPosition}"])) {
+            return $this->memo["{$level}{$beamPosition}"];
+        }
         if (!isset($this->input[$level])) {
-//            echo "$level $beamPosition end\n";
             return 1;
         }
+        if (!isset($this->input[$level][$beamPosition])) {
+            return 0;
+        }
         if ($this->input[$level][$beamPosition] !== '^') {
-//            echo "$level $beamPosition no split\n";
             return $this->solver($level + 1, $beamPosition);
         }
-        $left = $beamPosition - 1;
-        $right = $beamPosition + 1;
-//        echo "$level $beamPosition split $left $right\n";
-        $leftLines = $left >= 0 ? $this->solver($level + 1, $left) : 0;
-        $rightLines = $right < count($this->input[$level]) ? $this->solver($level + 1, $right) : 0;
-        return $leftLines + $rightLines;
+        $leftLines = $this->solver($level + 1, $beamPosition - 1);
+        $rightLines = $this->solver($level + 1, $beamPosition + 1);
+        $total = $leftLines + $rightLines;
+        $this->memo["{$level}{$beamPosition}"] = $total;
+        return $total;
     }
 
 }
