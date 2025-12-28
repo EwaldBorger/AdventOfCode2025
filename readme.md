@@ -40,7 +40,7 @@ Answers in the titles, because your answer will be different because your input 
     * [Part 2 ⭐ 3806264447357](#part-2--3806264447357)
   * [Day 8](#day-8)
     * [Part 1 ⭐ 129564](#part-1--129564)
-    * [Part 2](#part-2)
+    * [Part 2 ⭐ 42047840](#part-2--42047840)
   * [Runtimes](#runtimes)
 <!-- TOC -->
 
@@ -209,7 +209,7 @@ Butchered the part 1 code to just go through all possible pairs and return as so
 | 5-2    | 1        | 1            | 0m0,095s   | 0m0,061s       |
 | 6-1    | 1        | 1 (4)        | 0m0,075s   | 0m0,069s       |
 | 6-2    | 1        | 1            | 0m0,073s   | 0m0,086s       |
-| 7-1    | 1        |              | 0m0,062s   |                |
-| 7-2    | 3        |              | 0m0,181s   |                |
-| 8-1    | 1        |              | 0m8,300s   |                |
-| 8-2    | 1        |              | 0m16,656s  |                |
+| 7-1    | 1        | 1            | 0m0,062s   | 0m0,052s       |
+| 7-2    | 3        | 1            | 0m0,181s   | 0m0,060s       |
+| 8-1    | 1        | 1            | 0m8,300s   | 0m6,679s       |
+| 8-2    | 1        | 1            | 0m16,656s  | 0m6,741s       |
