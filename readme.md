@@ -11,7 +11,7 @@ As a way for me to try out Gemini, I also feed just the puzzle to it (at work we
 AFTER I solved it myself first. Just two days in I'm impressed with it, only using the 'fast' mode, not even '3 Pro'.
 By now, I've switched it to 3-pro, and it has solved everything in the first attempt so far.
 
-**Current score: 14⭐**
+**Current score: 15⭐**
 
 Answers in the titles, because your answer will be different because your input will be different :)
 
@@ -38,6 +38,9 @@ Answers in the titles, because your answer will be different because your input 
   * [Day 7](#day-7)
     * [Part 1 ⭐ 1490](#part-1--1490)
     * [Part 2 ⭐ 3806264447357](#part-2--3806264447357)
+  * [Day 8](#day-8)
+    * [Part 1 ⭐ 129564](#part-1--129564)
+    * [Part 2](#part-2)
   * [Runtimes](#runtimes)
 <!-- TOC -->
 
@@ -170,8 +173,23 @@ So, that's not it.
 Added memoization, as per suggestions in the subreddit, but apparently not correctly yet:
 3129507056344 gave "your answer is too low".
 
-Ah, stupid me, I concatted level and position without a separator... so 11111 was use for both 11-111 and 111-11.
+Ah, stupid me, I concatenated level and position without a separator... so 11111 was use for both 11-111 and 111-11.
 Fixed it and had the right answer.
+
+## Day 8
+
+### Part 1 ⭐ 129564
+
+Mmz, multidimensional problems, not something I'm good at :)
+The link to the euclidian algorithm was helpful, and subreddit had more test cases based on the example.
+
+Had quite some difficulty with getting the example to work, but when it worked the real input also directly gave the
+correct answer!
+Code is far from optimal... just happy to get it working.
+
+### Part 2
+
+Not sure if I get the assignment, not gonna do it right now.
 
 ## Runtimes
 
@@ -191,3 +209,5 @@ Fixed it and had the right answer.
 | 6-2    | 1        | 1            | 0m0,073s   | 0m0,086s       |
 | 7-1    | 1        |              | 0m0,062s   |                |
 | 7-2    | 3        |              | 0m0,181s   |                |
+| 8-1    | 1        |              | 0m8,300s   |                |
+|        |          |              |            |                |

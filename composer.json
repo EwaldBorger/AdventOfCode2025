@@ -13,12 +13,16 @@
     }
   ],
   "require-dev": {
+    "php": "8.4",
     "carthage-software/mago": "^1.0.0-rc.6",
     "phpunit/phpunit": "^12.4"
   },
   "config": {
     "allow-plugins": {
       "carthage-software/mago": true
+    },
+    "platform": {
+      "php": "8.4"
     }
   },
   "scripts": {
