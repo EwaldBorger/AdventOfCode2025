@@ -11,7 +11,7 @@ As a way for me to try out Gemini, I also feed just the puzzle to it (at work we
 AFTER I solved it myself first. Just two days in I'm impressed with it, only using the 'fast' mode, not even '3 Pro'.
 By now, I've switched it to 3-pro, and it has solved everything in the first attempt so far.
 
-**Current score: 15⭐**
+**Current score: 16⭐**
 
 Answers in the titles, because your answer will be different because your input will be different :)
 
@@ -187,9 +187,11 @@ Had quite some difficulty with getting the example to work, but when it worked t
 correct answer!
 Code is far from optimal... just happy to get it working.
 
-### Part 2
+### Part 2 ⭐ 42047840
 
-Not sure if I get the assignment, not gonna do it right now.
+Difficulty understanding the actual task, but from tracking back in the example it means find the last pair after which
+the number of circuits is one and all junction boxes have been seen.
+Butchered the part 1 code to just go through all possible pairs and return as soon as the condition is met.
 
 ## Runtimes
 
@@ -210,4 +212,4 @@ Not sure if I get the assignment, not gonna do it right now.
 | 7-1    | 1        |              | 0m0,062s   |                |
 | 7-2    | 3        |              | 0m0,181s   |                |
 | 8-1    | 1        |              | 0m8,300s   |                |
-|        |          |              |            |                |
+| 8-2    | 1        |              | 0m16,656s  |                |
