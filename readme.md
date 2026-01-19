@@ -11,7 +11,7 @@ As a way for me to try out Gemini, I also feed just the puzzle to it (at work we
 AFTER I solved it myself first. Just two days in I'm impressed with it, only using the 'fast' mode, not even '3 Pro'.
 By now, I've switched it to 3-pro, and it has solved everything in the first attempt so far.
 
-**Current score: 16⭐**
+**Current score: 17⭐**
 
 Answers in the titles, because your answer will be different because your input will be different :)
 
@@ -41,6 +41,8 @@ Answers in the titles, because your answer will be different because your input 
   * [Day 8](#day-8)
     * [Part 1 ⭐ 129564](#part-1--129564)
     * [Part 2 ⭐ 42047840](#part-2--42047840)
+  * [Day 9](#day-9)
+    * [Part 1 ⭐ 4759420470](#part-1--4759420470)
   * [Runtimes](#runtimes)
 <!-- TOC -->
 
@@ -193,6 +195,13 @@ Difficulty understanding the actual task, but from tracking back in the example 
 the number of circuits is one and all junction boxes have been seen.
 Butchered the part 1 code to just go through all possible pairs and return as soon as the condition is met.
 
+
+## Day 9
+
+### Part 1 ⭐ 4759420470
+
+Felt a bit too easy... but worked directly. 
+
 ## Runtimes
 
 | Puzzle | Tries me | Tries gemini | Runtime me | Runtime gemini |
@@ -213,3 +222,4 @@ Butchered the part 1 code to just go through all possible pairs and return as so
 | 7-2    | 3        | 1            | 0m0,181s   | 0m0,060s       |
 | 8-1    | 1        | 1            | 0m8,300s   | 0m6,679s       |
 | 8-2    | 1        | 1            | 0m16,656s  | 0m6,741s       |
+| 9-1    | 1        |              | 0m0,860s   |                |
